@@ -47,6 +47,27 @@ Page({
   },
 
   /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+    if (this.data.hasUserInfo) {
+      let that = this;
+      wx.stopPullDownRefresh({
+        success() {
+          // 必须是在用户已经授权的情况下调用
+          wx.getUserInfo({
+            success(res) {
+              that.setData!({
+                userInfo: res.userInfo,
+              })
+            }
+          })
+        }
+      });
+    }
+  },
+
+  /**
    * 获取用户信息
    */
   getUserInfo(e: any) {

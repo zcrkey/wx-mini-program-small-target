@@ -3,6 +3,10 @@
   <view class="clear" bindtap="onClickClearModal">
     <i class="fa fa-trash-o"></i>
   </view>
+  <view class="contact">
+    <contact-button type="default-dark" size="20">
+    </contact-button>
+  </view>
   <view wx:if="{{!hasUserInfo && canIUse}}" class="user-logo">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
   </view>
@@ -21,7 +25,7 @@
       </span>
     </view>
     <view class="user-info-address key-text-center">
-    {{userInfo.country}} {{userInfo.province}} {{userInfo.city}}
+      {{userInfo.country}} {{userInfo.province}} {{userInfo.city}}
     </view>
     <text class="introduce">
       越努力，越幸运！
