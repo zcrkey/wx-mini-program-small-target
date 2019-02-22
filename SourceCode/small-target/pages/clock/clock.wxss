@@ -1,0 +1,64 @@
+/* pages/clock/clock.wxss */
+
+page {
+  height: 100%;
+}
+
+.clock {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.clock .button {
+  color: #fff;
+  font-size: 26px;
+  position: absolute;
+  left: 0px;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.clock .button .clockInfo {
+  font-size: 26px;
+}
+
+.clock .button .clockInfo span {
+  display: block;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.clock .button .icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #fdc941;
+  border: 1px solid #fdc126;
+}
+
+.clock .button .icon .clock-icon {
+  color: #fff;
+  margin-top: 17px;
+}
+
+.clock .button .icon .clock-text{
+  margin-top: 20px;
+  display: block;
+  font-size: 13px;
+}
+
+.clock .tips {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  left: 0px;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+}

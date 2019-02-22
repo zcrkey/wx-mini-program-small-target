@@ -1,0 +1,25 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <view class="list">
+    <view class='item' wx:for="{{TARGET_LIST_DATA}}" for="null" wx:for-item="item" wx:for-index="index" wx:key="memoId">
+      <view bindtap="onClickClock" data-item="{{item}}" data-id="{{item.id}}">
+        <i class="fa fa-{{item.icon}} icon"></i>
+        <view class="body">
+          <span class="name key-elip">{{item.name}}</span>
+          <span class="finish-days">
+            已完成目标
+            <samp>{{item.finishDays}}</samp>
+            天
+          </span>
+        </view>
+        <i wx:if="{{item.hasDaysClock}}" class="fa fa-check right-icon right-icon-check"></i>
+        <i wx:else class="fa fa-angle-right right-icon"></i>
+      </view>
+    </view>
+    <!--
+    <view class="add">
+      <button>添加目标</button>
+    </view>
+    -->
+  </view>
+</view>

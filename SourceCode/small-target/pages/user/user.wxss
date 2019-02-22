@@ -1,0 +1,51 @@
+/* pages/user/user.wxss */
+
+.user {
+}
+
+.user-logo {
+  padding: 10px;
+}
+
+.user-info {
+  margin-top: 50px;
+}
+
+.user-info-avatarUrl {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+}
+
+.user-info-nickName {
+  display: block;
+  color: #222;
+}
+
+.user-info-gender {
+  margin-left: 4px;
+  color: #aaa;
+}
+
+.user-info-gender-1 {
+  color: #5aa7f9;
+}
+
+.user-info-gender-2 {
+  color: #ff9dc6;
+}
+
+.user-info-address {
+  margin-top: 6px;
+  color: #666;
+}
+
+.introduce {
+  position: fixed;
+  bottom: 15px;
+  left: 0px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #888;
+}

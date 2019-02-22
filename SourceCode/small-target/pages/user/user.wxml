@@ -1,0 +1,27 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+  <view wx:if="{{!hasUserInfo && canIUse}}" class="user-logo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">请先登录</button>
+  </view>
+  <view wx:else class="user-info key-flex key-flex-v key-flex-v-center">
+    <image class="user-info-avatarUrl" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user-info-nickName key-text-center">
+      {{userInfo.nickName}}
+      <span wx:if="{{userInfo.gender == 0}}" class="user-info-gender" title="未知">
+        <i class="fa fa-genderless"></i>
+      </span>
+      <span wx:elif="{{userInfo.gender == 1}}" class="user-info-gender user-info-gender-1" title="男">
+        <i class="fa fa-mars"></i>
+      </span>
+      <span wx:elif="{{userInfo.gender == 2}}" class="user-info-gender user-info-gender-2" title="女">
+        <i class="fa fa-venus"></i>
+      </span>
+    </view>
+    <view class="user-info-address key-text-center">
+    {{userInfo.country}} {{userInfo.province}} {{userInfo.city}}
+    </view>
+    <text class="introduce">
+      越努力，越幸运！
+    </text>
+  </view>
+</view>

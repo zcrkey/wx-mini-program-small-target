@@ -1,10 +1,447 @@
 /**app.wxss**/
-.container {
-  height: 100%;
+
+/** ==== font-awesome.wxss ==== **/
+@import "./assets/fonts/font-awesome.wxss";
+
+/** ==== 基础样式 ==== **/
+
+.key-box-h {
+  width: 100% !important;
+}
+
+.key-box-v {
+  height: 100% !important;
+}
+
+/** 单行溢出省略 **/
+
+.key-elip {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/** 清理浮动 **/
+
+.key-clear {
+  clear: both;
+}
+
+.key-clear:after {
+  content: '\20';
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+/** 外边距 - 全部边距 **/
+
+.key-margin-5 {
+  margin: 5px !important;
+}
+
+.key-margin-10 {
+  margin: 10px !important;
+}
+
+.key-margin-15 {
+  margin: 15px !important;
+}
+
+.key-margin-20 {
+  margin: 20px !important;
+}
+
+/** 负外边距 - 全部边距 **/
+
+.key-margin-turn-5 {
+  margin: -5px !important;
+}
+
+.key-margin-turn-10 {
+  margin: -10px !important;
+}
+
+.key-margin-turn-15 {
+  margin: -15px !important;
+}
+
+.key-margin-turn-20 {
+  margin: -20px !important;
+}
+
+/** 外边距 - 左边距 **/
+
+.key-margin-left-5 {
+  margin-left: 5px !important;
+}
+
+.key-margin-left-10 {
+  margin-left: 10px !important;
+}
+
+.key-margin-left-15 {
+  margin-left: 15px !important;
+}
+
+.key-margin-left-20 {
+  margin-left: 20px !important;
+}
+
+/** 外边距 - 右边距 **/
+
+.key-margin-right-5 {
+  margin-right: 5px !important;
+}
+
+.key-margin-right-10 {
+  margin-right: 10px !important;
+}
+
+.key-margin-right-15 {
+  margin-right: 15px !important;
+}
+
+.key-margin-right-20 {
+  margin-right: 20px !important;
+}
+
+/** 外边距 - 上边距 **/
+
+.key-margin-top-5 {
+  margin-top: 5px !important;
+}
+
+.key-margin-top-10 {
+  margin-top: 10px !important;
+}
+
+.key-margin-top-15 {
+  margin-top: 15px !important;
+}
+
+.key-margin-top-20 {
+  margin-top: 20px !important;
+}
+
+/** 外边距 - 下边距 **/
+
+.key-margin-bottom-5 {
+  margin-bottom: 5px !important;
+}
+
+.key-margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.key-margin-bottom-15 {
+  margin-bottom: 15px !important;
+}
+
+.key-margin-bottom-20 {
+  margin-bottom: 20px !important;
+}
+
+.key-no-margin {
+  margin: 0 !important;
+}
+
+/** 内边距 - 全部边距 **/
+
+.key-padding-5 {
+  padding: 5px !important;
+}
+
+.key-padding-10 {
+  padding: 10px !important;
+}
+
+.key-padding-15 {
+  padding: 15px !important;
+}
+
+.key-padding-20 {
+  padding: 20px !important;
+}
+
+/** 内边距 - 左边距 **/
+
+.key-padding-left-5 {
+  padding-left: 5px !important;
+}
+
+.key-padding-left-10 {
+  padding-left: 10px !important;
+}
+
+.key-padding-left-15 {
+  padding-left: 15px !important;
+}
+
+.key-padding-left-20 {
+  padding-left: 20px !important;
+}
+
+/** 内边距 - 右边距 **/
+
+.key-padding-right-5 {
+  padding-right: 5px !important;
+}
+
+.key-padding-right-10 {
+  padding-right: 10px !important;
+}
+
+.key-padding-right-15 {
+  padding-right: 15px !important;
+}
+
+.key-padding-right-20 {
+  padding-right: 20px !important;
+}
+
+/** 内边距 - 上边距 **/
+
+.key-padding-top-5 {
+  padding-top: 5px !important;
+}
+
+.key-padding-top-10 {
+  padding-top: 10px !important;
+}
+
+.key-padding-top-15 {
+  padding-top: 15px !important;
+}
+
+.key-padding-top-20 {
+  padding-top: 20px !important;
+}
+
+/** 内边距 - 下边距 **/
+
+.key-padding-bottom-5 {
+  padding-bottom: 5px !important;
+}
+
+.key-padding-bottom-10 {
+  padding-bottom: 10px !important;
+}
+
+.key-padding-bottom-15 {
+  padding-bottom: 15px !important;
+}
+
+.key-padding-bottom-20 {
+  padding-bottom: 20px !important;
+}
+
+.key-no-padding {
+  padding: 0 !important;
+}
+
+/** 边框 - 零样式 **/
+
+.key-no-border-top {
+  border-top-width: 0 !important;
+}
+
+.key-no-border-bottom {
+  border-bottom-width: 0 !important;
+}
+
+.key-no-border-left {
+  border-left-width: 0 !important;
+}
+
+.key-no-border-right {
+  border-right-width: 0 !important;
+}
+
+/** 文字对齐 **/
+
+.key-text-left {
+  text-align: left !important;
+}
+
+.key-text-center {
+  text-align: center !important;
+}
+
+.key-text-right {
+  text-align: right !important;
+}
+
+/** textarea 换行显示 **/
+
+.key-textarea-pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/** 显示隐藏 **/
+
+.key-show {
+  display: block !important;
+}
+
+.key-hide {
+  display: none !important;
+}
+
+.key-show-flex {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+/** 浮动  **/
+
+.key-pull-left {
+  float: left !important;
+}
+
+.key-pull-right {
+  float: right !important;
+}
+
+/** ==== flex 布局 ==== **/
+
+.key-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.key-flex-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.key-flex-h-start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.key-flex-h-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.key-flex-h-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.key-flex-h-space-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+}
+
+.key-flex-h-space-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.key-flex-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.key-flex-v-start {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.key-flex-v-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.key-flex-v-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.key-flex-grow-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.key-flex-no-grow {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.key-flex-shrink-1 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.key-flex-no-shrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.key-flex-component-v {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.key-flex-component-h {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}

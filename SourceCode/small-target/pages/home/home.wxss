@@ -1,0 +1,78 @@
+/* pages/home/home.wxss */
+
+.home {
+  padding: 5px;
+}
+
+.list {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 5px;
+}
+
+.item {
+  position: relative;
+  padding: 5px 5px 0px 5px;
+}
+
+.item .icon {
+  float: left;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-size: 26px;
+  color: #0292f9;
+}
+
+.item .body {
+  height: 48px;
+  margin-left: 58px;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.item .body .name {
+  display: block;
+}
+
+.item .body .finish-days {
+  font-size: 14px;
+  color: #adadad;
+}
+
+.item .body .finish-days samp {
+  display: inline-block;
+  color: #f69f00;
+  margin: 0 2px;
+}
+
+.item .right-icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  line-height: 58px;
+  font-size: 20px;
+  color: #0292f9;
+}
+
+.item .right-icon-check {
+  font-size: 16px;
+}
+
+.add {
+  padding: 5px;
+  line-height: 2.2;
+}
+
+.add button {
+  line-height: 2.4;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0292f9;
+}
