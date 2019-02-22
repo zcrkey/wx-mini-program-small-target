@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
+	"libVersion": "2.4.0",
 	"projectname": "small-target",
 	"scripts": {
 		"beforeCompile": "npm run compile",
