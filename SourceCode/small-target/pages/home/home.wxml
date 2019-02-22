@@ -1,7 +1,15 @@
 <!--pages/home/home.wxml-->
 <view class="home">
+  <!--
+  <view class='header'>
+    <view class='mode' bindtap="onClickToggleMode">
+      <i wx:if="{{isListMode}}" class="fa fa-list"></i>
+      <i wx:elif="{{!isListMode}}" class="fa fa-th-large"></i>
+    </view>
+  </view>
+  -->
   <view class="list">
-    <view class='item' wx:for="{{TARGET_LIST_DATA}}" for="null" wx:for-item="item" wx:for-index="index" wx:key="memoId">
+    <view class='item' wx:for="{{TARGET_LIST_DATA}}" for="null" wx:for-item="item" wx:for-index="index" wx:key="id">
       <view bindtap="onClickClock" data-item="{{item}}" data-id="{{item.id}}">
         <i class="fa fa-{{item.icon}} icon"></i>
         <view class="body">

@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/clock/clock",
+    "pages/clock-details/clock-details",
     "pages/user/user",
     "pages/index/index",
     "pages/explain/explain",

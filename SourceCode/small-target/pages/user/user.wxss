@@ -1,6 +1,20 @@
 /* pages/user/user.wxss */
 
 .user {
+  position: relative;
+  padding: 1px
+}
+
+.clear {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  color: #777;
 }
 
 .user-logo {
@@ -47,5 +61,5 @@
   text-align: center;
   display: block;
   width: 100%;
-  color: #888;
+  color: #666;
 }

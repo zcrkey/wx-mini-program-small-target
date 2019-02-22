@@ -1,59 +1,24 @@
 import { Utils } from "../../utils/utils";
+import { TARGET_LIST_DATA } from "./target-init";
+import { TARGET_DETAILS_LIST_DATA } from "./target-init";
 
 Page({
   data: {
-    TARGET_LIST_DATA: [
-      {
-        id: 1,
-        icon: "sun-o",
-        bgUrl: "/assets/imgs/sun.jpg",
-        name: "早起",
-        finishDays: 0,
-        clockDate: "",
-        clockTime: "",
-        hasDaysClock: false
-      },
-      {
-        id: 2,
-        icon: "moon-o",
-        bgUrl: "/assets/imgs/moon.jpg",
-        name: "早睡",
-        finishDays: 0,
-        clockDate: "",
-        clockTime: "",
-        hasDaysClock: false
-      },
-      {
-        id: 3,
-        icon: "tint",
-        bgUrl: "/assets/imgs/tint.jpg",
-        name: "喝水",
-        finishDays: 0,
-        clockDate: "",
-        clockTime: "",
-        hasDaysClock: false
-      },
-      {
-        id: 4,
-        icon: "bicycle",
-        bgUrl: "/assets/imgs/bicycle.jpg",
-        name: "运动",
-        finishDays: 0,
-        clockDate: "",
-        clockTime: "",
-        hasDaysClock: false
-      },
-    ],
+    TARGET_LIST_DATA: [] as any,
 
-    TARGET_DETAILS_LIST_DATA: {
-      1: [],
-      2: [],
-      3: [],
-      4: []
-    }
+    TARGET_DETAILS_LIST_DATA: {}
+  },
+
+  /**
+   * 初始化数据
+   */
+  init() {
+    this.data.TARGET_LIST_DATA = TARGET_LIST_DATA;
+    this.data.TARGET_DETAILS_LIST_DATA = TARGET_DETAILS_LIST_DATA
   },
 
   onLoad() {
+    this.init();
     this.getTargetListData();
     this.getTargetDetailsListData();
   },
@@ -81,7 +46,7 @@ Page({
 
   onClickClock(event: any) {
     let itemJson = JSON.stringify(event.currentTarget.dataset.item);
-    let id = JSON.stringify(event.currentTarget.dataset.id);
+    let id = event.currentTarget.dataset.id;
     // 跳转到打卡页面
     wx.navigateTo({
       url: '/pages/clock/clock?itemJson=' + itemJson + '&id=' + id

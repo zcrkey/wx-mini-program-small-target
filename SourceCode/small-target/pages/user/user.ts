@@ -1,5 +1,8 @@
 //获取应用实例
 import { IMyApp } from '../../app';
+import { TARGET_LIST_DATA } from "../home/target-init";
+import { TARGET_DETAILS_LIST_DATA } from "../home/target-init";
+
 const app = getApp<IMyApp>();
 
 Page({
@@ -54,6 +57,39 @@ Page({
         hasUserInfo: true
       })
     }
+  },
+
+  /**
+   * 清理提示
+   */
+  onClickClearModal() {
+    let that = this;
+    wx.showModal({
+      title: '清理提示',
+      content: '是否确定清理所有打卡记录！',
+      success(res) {
+        if (res.confirm) {
+          that.onClickClear();
+        } else if (res.cancel) {
+        }
+      }
+    })
+  },
+
+  /**
+   * 清理
+   */
+  onClickClear() {
+    try {
+      //异步更新列表缓存
+      wx.setStorageSync('TARGET_LIST_DATA', TARGET_LIST_DATA);
+      wx.setStorageSync('TARGET_DETAILS_LIST_DATA', TARGET_DETAILS_LIST_DATA);
+      wx.showToast({
+        title: '清理成功',
+        icon: 'success',
+        duration: 1000
+      });
+    } catch (e) { }
   }
 
 })

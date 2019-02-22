@@ -1,6 +1,7 @@
 <!--pages/clock/clock.wxml-->
 
-<view class="clock" style="background-image: url({{item.bgUrl}})">
+<view class="clock">
+  <image class='clock-bgUrl' src='{{item.bgUrl}}' mode='widthFix'></image>
   <view wx:if="{{!hasTips}}" class="button">
     <view wx:if="{{!hasDaysClock}}" class='icon' bindtap="onClickClockModal">
       <i class="fa fa-crosshairs clock-icon"></i>
@@ -16,4 +17,5 @@
   <view wx:else class="tips">
     不在打卡时间段内哦
   </view>
+  <text class="more" bindtap="onClickMore" data-id="{{id}}">查看更多</text>
 </view>

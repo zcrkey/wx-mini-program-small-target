@@ -1,7 +1,10 @@
 <!--pages/user/user.wxml-->
 <view class="user">
+  <view class="clear" bindtap="onClickClearModal">
+    <i class="fa fa-trash-o"></i>
+  </view>
   <view wx:if="{{!hasUserInfo && canIUse}}" class="user-logo">
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">请先登录</button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
   </view>
   <view wx:else class="user-info key-flex key-flex-v key-flex-v-center">
     <image class="user-info-avatarUrl" src="{{userInfo.avatarUrl}}"></image>

@@ -80,8 +80,11 @@ Page({
     })
   },
 
+  /**
+   * 打卡
+   */
   onClickClock() {
-    // 获取本地缓存备忘录列表数据
+    // 获取本地缓存打卡详情列表数据
     try {
       let targetDetailsListData = wx.getStorageSync('TARGET_DETAILS_LIST_DATA');
       if (targetDetailsListData) {
@@ -116,9 +119,17 @@ Page({
         duration: 1500
       })
     }
+  },
 
-
-
+  /**
+   * 点击更多
+   */
+  onClickMore(event: any) {
+    let id = event.currentTarget.dataset.id;
+    // 跳转到打卡页面
+    wx.navigateTo({
+      url: '/pages/clock-details/clock-details?id=' + id
+    })
   }
 
 })

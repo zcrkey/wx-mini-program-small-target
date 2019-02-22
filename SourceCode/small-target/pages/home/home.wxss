@@ -1,7 +1,11 @@
 /* pages/home/home.wxss */
 
 .home {
-  padding: 5px;
+  padding: 8px;
+}
+
+.header {
+  
 }
 
 .list {

@@ -1,0 +1,22 @@
+<!--pages/clock-details/clock-details.wxml-->
+
+<view class="clock-details">
+  <view class="header">
+    我的打卡记录
+  </view>
+  <view class="body">
+    <view wx:if="{{listData != null && listData.length > 0}}">
+      <view class='item' wx:for="{{listData}}" for="null" wx:for-item="item" wx:for-index="index" wx:key="id">
+        <view class='text-left'>
+          打卡日期：
+        </view>
+        <view class='text-right'>
+          {{item.date}} {{item.time}}
+        </view>
+      </view>
+    </view>
+    <view wx:else class='nothing'>
+      暂无打卡记录
+    </view>
+  </view>
+</view>
