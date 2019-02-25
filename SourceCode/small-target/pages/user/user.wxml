@@ -1,10 +1,12 @@
 <!--pages/user/user.wxml-->
 <view class="user">
+  <!--清理-->
   <view class="clear" bindtap="onClickClearModal">
     <i class="fa fa-trash-o"></i>
   </view>
+  <!--客服-->
   <view class="contact">
-    <contact-button type="default-dark" size="20">
+    <contact-button type="default-dark" size="20" session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}'>
     </contact-button>
   </view>
   <view wx:if="{{!hasUserInfo && canIUse}}" class="user-logo">
